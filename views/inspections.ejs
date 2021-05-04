@@ -1,0 +1,23 @@
+<%- include("partials/header"); -%>
+
+<h1>Inspection Submissions</h1>
+<div class="container-fluid">
+  <div class="row" align="center">
+
+  <% inspectionCards.forEach(function(inspection){ %>
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+      <div class="card">
+        <p><%= inspection.date %></p>
+        <p><%= inspection.user %></p>
+        <p><%= inspection.vehicle %></p>
+        <a href="<%= inspection.images %>" target="_blank"><img src="<%= inspection.images %>" class="inspection-photos" /></a>
+      </div>
+    </div>
+  <% }); %>
+
+  </div>
+
+</div>
+
+
+<%- include("partials/footer"); -%>
